@@ -3,7 +3,7 @@ name: Super-Linter
 on:
   push:
     branches:
-      - phuc   # Chỉ kích hoạt khi push lên nhánh dev
+      - phuc   # Chỉ kích hoạt khi push lên nhánh phuc
 
 jobs:
   super-lint:
