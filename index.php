@@ -14,6 +14,6 @@
 define( 'WP_USE_THEMES', true );
 
 // Thêm đoạn text ở đây
-echo "Hello, this is a custom message PHUC!";
+echo "Hello, this is a custom message PHUC12!";
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp-blog-header.php';
