@@ -1,0 +1,23 @@
+name: demo-github-actions-workflow
+
+on:
+  push:
+    paths:
+      - '**.php'
+  pull_request:
+    branches:
+      - 'demo-branch/phuc'
+    types:
+      - assigned
+  branch_protection_rule:
+    types:
+      - edited
+      - created
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      # Thêm các bước khác tại đây
