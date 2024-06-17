@@ -1,9 +1,11 @@
-name: Super-Linter
+name: Syntax Check
 
 on:
   push:
     branches:
       - phuc   # Chỉ kích hoạt khi push lên nhánh phuc
+    paths:
+      - '**.html'  # Đổi lại thành đuôi file mà bạn cần
 
 jobs:
   super-lint:
@@ -18,3 +20,5 @@ jobs:
         env:
           DEFAULT_BRANCH: phuc
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: '**.html'  # Đổi lại thành đuôi file mà bạn cần

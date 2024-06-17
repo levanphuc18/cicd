@@ -5,6 +5,10 @@
  * @package WordPress
  */
 
+// Điều hướng đến file test.html
+header("Location: test.html");
+exit;
+ 
 if ( ! isset( $wp_did_header ) ) {
 
 	$wp_did_header = true;
@@ -19,3 +23,6 @@ if ( ! isset( $wp_did_header ) ) {
 	require_once ABSPATH . WPINC . '/template-loader.php';
 
 }
+
+
+
