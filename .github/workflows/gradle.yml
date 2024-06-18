@@ -25,7 +25,7 @@ jobs:
         run: composer global require "squizlabs/php_codesniffer=*"
 
       - name: Run PHP_CodeSniffer
-        run: ~/.composer/vendor/bin/phpcs --standard=PSR12 test_error.php
+        run: ~/.composer/vendor/bin/phpcs --standard=PSR12 index.php
 
 
       - name: Set up Python
