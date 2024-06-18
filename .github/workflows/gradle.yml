@@ -16,6 +16,26 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
 
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4' # Adjust PHP version as needed
+
+      - name: Install PHP_CodeSniffer
+        run: composer global require "squizlabs/php_codesniffer=*"
+
+      - name: Run PHP_CodeSniffer
+        run: ~/.composer/vendor/bin/phpcs --standard=PSR12 index.php
+
+      - name: Run PHPCBF to fix errors
+        run: ~/.composer/vendor/bin/phpcbf --standard=PSR12 index.php
+
+      - name: Commit and push changes (if any)
+        run: |
+          git add index.php
+          git diff-index --quiet HEAD || git commit -m "Fix PHP_CodeSniffer issues" && git push origin HEAD
+
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
