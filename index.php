@@ -11,7 +11,7 @@
  *
  * @var bool
  */
-define( 'WP_USE_THEMES', true );
+define('WP_USE_THEMES', true);
 
 // Thêm đoạn text ở đây
 echo "Hello, this is a custom message PHUC";
