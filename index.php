@@ -14,6 +14,8 @@
 define( 'WP_USE_THEMES', true );
 
 // Thêm đoạn text ở đây
-echo "Hello, this is a custom message PHUC222;
+echo "Hello, this is a custom message PHUC";
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp-blog-header.php';
+// Thêm đoạn text ở đây
+echo "Hello, this is a custom message PHUC2222; // dahsodhash
